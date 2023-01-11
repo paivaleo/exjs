@@ -4,17 +4,27 @@
 Entre eles, tem a programação procedural (Sequência de código).
 */
 
+// Classes: Action.
+
+
 class Person {
-    constructor(name, age) {
+
+    steps = 0;
+
+    constructor(name) {
         this.name = name;
-        this.age = age;
+    }
+
+    takeAStep() {
+        this.steps++;
     }
 }
 
-let p1 = new Person("João", 20);
-let p2 = new Person("Maria", 37);
-let p3 = new Person("Pedro", 55);
+let p1 = new Person("João");
+let p2 = new Person("Maria");
+let p3 = new Person("Pedro");
 
-console.log(p1.age);
-console.log(p2.age);
-console.log(p3.age);
+p1.takeAStep();
+p1.takeAStep();
+console.log(`Passos de ${p1.name}: ${p1.steps}`);
+console.log(`Passos de ${p2.name}: ${p2.steps}`);
